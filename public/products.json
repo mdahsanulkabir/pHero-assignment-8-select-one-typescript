@@ -1,0 +1,62 @@
+[
+  {
+    "id": "124e13b9-2d54-4b2f-a74d-a77b362d6ead",
+    "name": "Atomic Habits",
+    "price": 200,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/71F4+7rk2eL._AC_UL254_SR254,254_.jpg"
+  },
+  {
+    "id": "184e13b9-2d54-4b2f-a75d-a77b362d6ead",
+    "name": "The Road to React",
+    "price": 340,
+    "img": "https://m.media-amazon.com/images/I/61562JY-aLS._AC_SR135,135_.jpg"
+  },
+  {
+    "id": "184e13b9-2a54-5b2f-a75d-a77b362d6ead",
+    "name": "Python Tricks",
+    "price": 340,
+    "img": "https://m.media-amazon.com/images/I/61k7Z74UuZL._AC_SR270,270_.jpg"
+  },
+  {
+    "id": "184e13b9-2a54-6b2f-a75d-a87b362d6ead",
+    "name": "Eloquent JavaScript",
+    "price": 250,
+    "img": "https://m.media-amazon.com/images/I/91ahAhFS-LL._AC_SR135,135_.jpg"
+  },
+  {
+    "id": "184e13b9-2f54-6b2f-a75d-a87d362d6ead",
+    "name": "Pro MERN Stack",
+    "price": 500,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61U+mYt0-FL._AC_UL160_SR160,160_.jpg"
+  },
+  {
+    "id": "184e43b9-2f54-6b2e-a75d-a87d362d6ead",
+    "name": "Beginning Node.js",
+    "price": 425,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61w5eUdyIsL._AC_UL160_SR160,160_.jpg"
+  },
+  {
+    "id": "184e43b9-2f64-6b2e-a75d-a87d362d6ead",
+    "name": "Learning React",
+    "price": 335,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/91uFdkCJmAL._AC_UL160_SR160,160_.jpg"
+  },
+  {
+    "id": "184e73b9-2f64-6b2e-a75d-a87d362d6eaf",
+    "name": "React Projects",
+    "price": 455,
+    "img": "https://m.media-amazon.com/images/I/71uHpFe9W4L._AC_UL140_SR140,140_.jpg"
+  },
+  {
+    "id": "184e73b9-2f64-6b5e-a75d-a87d362d6eaa",
+    "name": "Modern Javascript",
+    "price": 385,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/815aQJHeMbL._AC_UL160_SR160,160_.jpg"
+  },
+  {
+    "id": "184e73b9-2f64-6b5e-a75d-a87d362d6eba",
+    "name": "Beginning MEAN Stack",
+    "price": 385,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/61EjV4jvbuL._AC_UL160_SR160,160_.jpg"
+  }
+]
