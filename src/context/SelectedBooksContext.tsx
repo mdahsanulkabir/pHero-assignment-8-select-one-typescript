@@ -16,6 +16,7 @@ type SelectedBooksContext = {
     releaseBook: (id: string) => void
     showA: boolean
     toggleShowA : () => void
+    reset: () => void
 }
 
 export const SelectedBooksContext = createContext({} as SelectedBooksContext)
@@ -44,6 +45,10 @@ export const SelectedBooksProvider = ({ children }: SelectedBoksProviderProps) =
             return currBooks.filter(book => book.id !== id)
         })
     }
+
+    const reset = () => {
+        setSelectedBooks([])
+    }
     
     return (
         <SelectedBooksContext.Provider 
@@ -53,7 +58,8 @@ export const SelectedBooksProvider = ({ children }: SelectedBoksProviderProps) =
                 selectBook,
                 releaseBook,
                 showA,
-                toggleShowA
+                toggleShowA,
+                reset
             }}
         >
             {children}

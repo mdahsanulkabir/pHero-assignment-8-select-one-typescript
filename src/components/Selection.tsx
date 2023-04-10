@@ -2,9 +2,10 @@ import { useContext, useState } from "react";
 import { Button, Stack } from "react-bootstrap";
 import { SelectedBooksContext } from "../context/SelectedBooksContext";
 import SelectedBook from "./SelectedBook";
+import bookList from '../data/products.json'
 
 const Selection = () => {
-    const { selectedQuantity, selectedBooks } = useContext(SelectedBooksContext)
+    const { selectedQuantity, selectedBooks, reset } = useContext(SelectedBooksContext)
     const [ randomIndex, setRandomIndex ] = useState<number | null>( null )
     const randomNum = (qty: number) => Math.floor(Math.random() * (qty - 1 + 1) + 1);
     const selectOne = () => {
@@ -36,12 +37,12 @@ const Selection = () => {
                     </> : null
                 }
                 {
-                    selectedQuantity && <Button className="w-50 mx-auto">Reset</Button>
+                    selectedQuantity && <Button className="w-50 mx-auto" onClick={reset}>Reset</Button>
                 }
             </Stack>
             {
                 randomIndex && (
-                    <h1>11</h1>
+                    <img src={`${bookList.find(bookInList => bookInList.id === selectedBooks[randomIndex].id )?.img}`} />
                 )
             }
         </div>
