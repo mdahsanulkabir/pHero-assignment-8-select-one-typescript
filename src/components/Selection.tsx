@@ -11,6 +11,10 @@ const Selection = () => {
     const selectOne = () => {
         setRandomIndex( randomNum(selectedQuantity) )
     }
+    const handleReset = () => {
+        setRandomIndex(null)
+        reset();
+    }
     return (
         <div className="d-flex flex-column align-items-center">
             <h4>Selection</h4>
@@ -28,7 +32,7 @@ const Selection = () => {
                     </>
                 ) : null
             }
-            <Stack gap={3} >
+            <Stack gap={3} className="mb-3">
                 {
                     selectedQuantity >= 2 ?
                     <>
@@ -37,7 +41,7 @@ const Selection = () => {
                     </> : null
                 }
                 {
-                    selectedQuantity && <Button className="w-50 mx-auto" onClick={reset}>Reset</Button>
+                    selectedQuantity && <Button className="w-50 mx-auto" onClick={handleReset}>Reset</Button>
                 }
             </Stack>
             {
