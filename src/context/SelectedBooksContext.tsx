@@ -1,10 +1,11 @@
 import { ReactNode, useState, createContext } from "react";
+import Toast from "../utility/Toast";
 
 type SelectedBoksProviderProps = {
     children: ReactNode
 }
 
-type SelectedBook = {
+export type SelectedBook = {
     id: string
 }
 
@@ -13,6 +14,8 @@ type SelectedBooksContext = {
     selectedQuantity: number
     selectBook: (id: string) => void
     releaseBook: (id: string) => void
+    showA: boolean
+    toggleShowA : () => void
 }
 
 export const SelectedBooksContext = createContext({} as SelectedBooksContext)
@@ -20,13 +23,20 @@ export const SelectedBooksContext = createContext({} as SelectedBooksContext)
 
 export const SelectedBooksProvider = ({ children }: SelectedBoksProviderProps) => {
     const [ selectedBooks, setSelectedBooks ] = useState<SelectedBook[]>([])
+    const [ showA, setShowA ] = useState<boolean>(false)
     const selectedQuantity = selectedBooks.length;
 
+    const toggleShowA = () => setShowA(!showA)
+
     const selectBook = (id: string) => {
-        setSelectedBooks(currBooks => {
-            if(currBooks.find(book => book.id === id)?.id == null) return [...currBooks, {id}]
-            return [...currBooks]
-        })
+        if(selectedQuantity > 3) {
+            toggleShowA();
+        } else {
+            setSelectedBooks(currBooks => {
+                if(currBooks.find(book => book.id === id)?.id == null) return [...currBooks, {id}]
+                return [...currBooks]
+            })
+        }
     }
 
     const releaseBook = (id : string) => {
@@ -41,10 +51,13 @@ export const SelectedBooksProvider = ({ children }: SelectedBoksProviderProps) =
                 selectedBooks,
                 selectedQuantity,
                 selectBook,
-                releaseBook
+                releaseBook,
+                showA,
+                toggleShowA
             }}
         >
             {children}
+            <Toast showA={showA} toggleShowA={toggleShowA}/>
         </SelectedBooksContext.Provider>
     );
 };

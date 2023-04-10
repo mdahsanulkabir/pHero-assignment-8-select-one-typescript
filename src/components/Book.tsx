@@ -3,7 +3,7 @@ import { formatCurrency } from "../utility/formatCurrency"
 import { useContext } from "react"
 import { SelectedBooksContext } from "../context/SelectedBooksContext"
 
-type BookProps = {
+export type BookProps = {
     id : string
     name : string
     price : number
@@ -34,8 +34,6 @@ const Book = ({ id, name, price, img }:BookProps) => {
                         >Nominate</Button>
                     )
                 }
-                
-                
             </Card.Body>
         </Card>
     );
